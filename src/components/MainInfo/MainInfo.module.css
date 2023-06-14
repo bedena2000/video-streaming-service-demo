@@ -1,0 +1,67 @@
+.main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  color: white;
+  padding: 0px 70px;
+  margin-top: 83px;
+  width: 805px;
+}
+
+.main-info-smalltext {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
+}
+
+.main-info-title {
+  color: #ffffff;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
+  line-height: 72px;
+  font-size: 65px;
+  font-weight: 900;
+}
+
+.main-info-description {
+  color: #ffffff;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45);
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.main-info-button-wrapper {
+  background: #ffffff;
+  border-radius: 3px 0px 0px 3px;
+  display: flex;
+  width: 600px;
+  height: 60px;
+  border-radius: 3px 0px 0px 3px;
+  border: 1px solid grey;
+}
+
+.main-info-button-wrapper > button {
+  background: #f41b3b;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.main-info-button-wrapper > input {
+  color: #807e81;
+  font-size: 16px;
+  line-height: 22px;
+  padding-left: 24px;
+}
+
+.main-info-button-wrapper > * {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+}

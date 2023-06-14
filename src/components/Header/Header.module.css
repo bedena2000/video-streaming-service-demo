@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 70px 0px 70px;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  gap: 57px;
+}
+
+.header-search > img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.header-search > a {
+    background: #F41B3B;
+    border-radius: 3px;
+    padding: 10px 24px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: none;
+}
