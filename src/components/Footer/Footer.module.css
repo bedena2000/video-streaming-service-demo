@@ -1,0 +1,42 @@
+.footer {
+  border-top: 2px solid #4f4e50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 130px 70px 40px 130px;
+  margin-top: 120px;
+}
+
+
+.footer-left {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-left > p {
+    cursor: pointer;
+}
+
+.footer-middle {
+    display: flex;
+    align-items: center;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    color: white;
+}
+
+.footer-right > div {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-right > div > img {
+    cursor: pointer;
+}

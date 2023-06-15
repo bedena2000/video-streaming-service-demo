@@ -1,33 +1,50 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import styles from "./MovieBlock.module.css";
+
+import apiKeyAuth from "../../api";
+
+// Components
+import MovieBlockItem from "../MovieBlockItem/MovieBlockItem";
+import MovieBlockItem2 from "../MovieBlockItem/MovieBlockItem2";
 
 import SearchIcon from "../../assets/images/search-all.png";
 
+// Actions
+
+type movieListObject = {
+  original_title: string;
+  poster_path: string;
+  id: string;
+};
+
 interface MovieBlockProps {
-  movieList: Object[];
+  movieList: movieListObject[] | null;
   movieBlockTitle: string;
-  movieBlockIdentifier: number;
 }
 
-const MovieBlock: FC<MovieBlockProps> = ({ movieList, movieBlockTitle, movieBlockIdentifier }) => {
-
-    const movieBlockItem = {
-        1: '',
-        2: '',
-        3: ''
-    };
-
+const MovieBlock: FC<MovieBlockProps> = ({ movieList, movieBlockTitle }) => {
   return (
-    <div>
-      <div>
-        <p>{movieBlockTitle}</p>
-        <div>
+    <div className={styles["movie-block"]}>
+      <div className={styles["movie-block-info-wrapper"]}>
+        <p className={styles["movie-block-title"]}>{movieBlockTitle}</p>
+        <div className={styles["movie-block-see-all"]}>
           <p>See All</p>
           <img src={SearchIcon} alt="searchAll" />
         </div>
       </div>
 
-      <div>
-
+      <div className={styles["movie-list-wrapper"]}>
+        {movieList &&
+          movieList.map((item) => {
+            return (
+              <MovieBlockItem
+                key={item.id}
+                moviePosterName={item.original_title}
+                moviePosterPath={item.poster_path}
+              />
+            );
+          })}
       </div>
     </div>
   );
