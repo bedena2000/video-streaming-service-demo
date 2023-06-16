@@ -23,26 +23,32 @@ const Header: FC = () => {
     {
       title: "Home",
       img: Logo1,
+      toLink: "/"
     },
     {
       title: "Movie",
       img: Logo2,
+      toLink: "/movie"
     },
     {
       title: "Drama",
       img: Logo3,
+      toLink: "/drama"
     },
     {
       title: "Music Video",
       img: Logo4,
+      toLink: "/music"
     },
     {
       title: "Live Show",
       img: Logo5,
+      toLink: "/liveshow"
     },
     {
       title: "Comedies",
       img: Logo6,
+      toLink: "/Comedies"
     },
   ];
 

@@ -1,14 +1,15 @@
 import React, { FC } from "react";
 import NavigationItem from "../NavigationItem/NavigationItem";
-import styles from './Navigation.module.css';
+import styles from "./Navigation.module.css";
 
 interface NavigationObject {
-    img: string,
-    title: string,
+  img: string;
+  title: string;
+  toLink: string;
 }
 
 interface NavigationProps {
-    navListInfo: NavigationObject[]
+  navListInfo: NavigationObject[];
 }
 
 const Navigation: FC<NavigationProps> = ({ navListInfo }) => {
@@ -19,7 +20,7 @@ const Navigation: FC<NavigationProps> = ({ navListInfo }) => {
           img={item.img}
           title={item.title}
           key={item.img}
-          to={item.title}
+          to={item.toLink}
         />
       ))}
     </div>

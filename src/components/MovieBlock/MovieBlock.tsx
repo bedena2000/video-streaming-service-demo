@@ -15,7 +15,7 @@ import SearchIcon from "../../assets/images/search-all.png";
 type movieListObject = {
   original_title: string;
   poster_path: string;
-  id: string;
+  id: number;
 };
 
 interface MovieBlockProps {
@@ -42,6 +42,7 @@ const MovieBlock: FC<MovieBlockProps> = ({ movieList, movieBlockTitle }) => {
                 key={item.id}
                 moviePosterName={item.original_title}
                 moviePosterPath={item.poster_path}
+                movieId={item.id}
               />
             );
           })}

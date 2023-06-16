@@ -1,0 +1,11 @@
+.asideMovieBlockTopWratedWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.asideMovieBlockTitle {
+  color: white;
+  font-size: 32px;
+  line-height: 40px;
+}

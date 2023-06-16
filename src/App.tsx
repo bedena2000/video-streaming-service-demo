@@ -9,12 +9,17 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // Components
 import { Home } from "./page/Home";
+import MovieDetail from "./page/MovieDetail";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
   },
+  {
+    path: "/movieDetails",
+    element: <MovieDetail />
+  }
 ]);
 
 function App() {
