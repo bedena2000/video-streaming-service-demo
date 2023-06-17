@@ -10,6 +10,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // Components
 import { Home } from "./page/Home";
 import MovieDetail from "./page/MovieDetail";
+import Movie from "./page/Movie";
+import NotFound from "./page/NotFound";
+import SignIn from "./page/SignIn";
+import Register from "./page/Register";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +23,21 @@ const router = createBrowserRouter([
   {
     path: "/movieDetails",
     element: <MovieDetail />
+  }, {
+    path: "/movie",
+    element: <Movie /> 
+  },
+  {
+    path: "/sign-in",
+    element: <SignIn /> 
+  },
+  {
+    path: "/register",
+    element: <Register />
+  },
+  {
+    path: "*",
+    element: <NotFound />
   }
 ]);
 

@@ -23,32 +23,32 @@ const Header: FC = () => {
     {
       title: "Home",
       img: Logo1,
-      toLink: "/"
+      toLink: "/",
     },
     {
       title: "Movie",
       img: Logo2,
-      toLink: "/movie"
+      toLink: "/movie",
     },
     {
       title: "Drama",
       img: Logo3,
-      toLink: "/drama"
+      toLink: "/drama",
     },
     {
       title: "Music Video",
       img: Logo4,
-      toLink: "/music"
+      toLink: "/music",
     },
     {
       title: "Live Show",
       img: Logo5,
-      toLink: "/liveshow"
+      toLink: "/liveshow",
     },
     {
       title: "Comedies",
       img: Logo6,
-      toLink: "/Comedies"
+      toLink: "/Comedies",
     },
   ];
 
@@ -59,7 +59,9 @@ const Header: FC = () => {
       </div>
       <Navigation navListInfo={navListInfo} />
       <div className={styles["header-search"]}>
-        <img src={SearchLogo} alt="searchIcon" />
+        <Link to='movie'>
+          <img src={SearchLogo} alt="searchIcon" />
+        </Link>
         <Link to="/sign-in">Sign In</Link>
       </div>
     </header>

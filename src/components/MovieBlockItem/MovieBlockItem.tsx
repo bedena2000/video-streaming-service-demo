@@ -3,7 +3,6 @@ import styles from "./MovieBlockItem.module.css";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
-
 // Actions
 import addToSelected from "../../redux/actions/selectedMoviesAction";
 

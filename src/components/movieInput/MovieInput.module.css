@@ -1,0 +1,26 @@
+.movie-input {
+    display: flex;
+    align-items: stretch;
+    background-color: rgb(149, 158, 158);
+    margin-top: 20px;
+    width: 300px;
+}
+
+.movie-input > input {
+  outline: none;
+  border: none;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  flex: 80%;
+}
+
+
+.movie-input > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 10%;
+    cursor: pointer;
+}

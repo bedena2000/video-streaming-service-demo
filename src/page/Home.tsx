@@ -40,7 +40,7 @@ export const Home: FC = () => {
     const fetchTopRated = async () => {
       try {
         const result = await fetch(
-          `https://api.themoviedb.org/3/tv/top_rated?api_key=${apiKeyAuth}`
+          `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKeyAuth}`
         );
         const data = await result.json();
         setTopRated(data.results.slice(0, 9));
@@ -52,7 +52,7 @@ export const Home: FC = () => {
     const fetchPopularTVSeries = async () => {
       try {
         const result = await fetch(
-          `https://api.themoviedb.org/3/tv/popular?api_key=${apiKeyAuth}`
+          `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKeyAuth}`
         );
         const data = await result.json();
         setTvSeries(data.results.slice(0, 9));
@@ -90,7 +90,7 @@ export const Home: FC = () => {
       )}
 
       {tvSeries ? (
-        <MovieBlock movieList={tvSeries} movieBlockTitle="Popular TV Series" />
+        <MovieBlock movieList={tvSeries} movieBlockTitle="Upcoming" />
       ) : (
         <p>Loading...</p>
       )}
