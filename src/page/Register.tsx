@@ -3,19 +3,35 @@ import styles from "./SingIn.module.css";
 import Header from "../components/Header/Header";
 import { Link } from "react-router-dom";
 
+// Firebase
+import { auth } from "../firebase/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+
+// Types
+type useImageTypes = any;
+
 const Register: FC = () => {
   const [userName, setUserName] = useState("");
   const [userPassword, setUserPassword] = useState("");
   const [userEmail, setUserEmail] = useState("");
-  const [userImage, setUserImage] = useState("");
+  const [userImage, setUserImage] = useState<useImageTypes>("");
   const [errorMessage, setErrorPassword] = useState("");
 
   const handleSignIn = (event: React.SyntheticEvent) => {
     event.preventDefault();
-    if (userName && userPassword.length > 6) {
+    if (userName && userPassword.length > 6 && userEmail) {
       setErrorPassword("");
-      console.log(userName);
-      console.log(userPassword);
+
+      const registerNewUser = async () => {
+        const result = await createUserWithEmailAndPassword(
+          auth,
+          userEmail,
+          userPassword
+        );
+        console.log(result);
+      };
+
+      registerNewUser();
     } else {
       setErrorPassword(
         "Your username is empty or password length is more than 6 characters, or username already exist, please add proper value"
@@ -72,10 +88,10 @@ const Register: FC = () => {
             </div>
           </div>
 
-          <Link to="/sign-in">Log in</Link>
           <Link onClick={handleSignIn} to="/">
-            Sign In
+            Sign in
           </Link>
+          <Link to="/sign-in">Log in</Link>
           <div>
             {errorMessage ? (
               <p
